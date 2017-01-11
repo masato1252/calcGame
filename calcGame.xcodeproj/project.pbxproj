@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		69D1B9721E269DFC00BCBE58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D1B9711E269DFC00BCBE58 /* AppDelegate.swift */; };
+		69D1B9741E269DFC00BCBE58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D1B9731E269DFC00BCBE58 /* ViewController.swift */; };
+		69D1B9771E269DFC00BCBE58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69D1B9751E269DFC00BCBE58 /* Main.storyboard */; };
+		69D1B9791E269DFC00BCBE58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69D1B9781E269DFC00BCBE58 /* Assets.xcassets */; };
+		69D1B97C1E269DFC00BCBE58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69D1B97A1E269DFC00BCBE58 /* LaunchScreen.storyboard */; };
+		69D1B9871E269DFD00BCBE58 /* calcGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D1B9861E269DFD00BCBE58 /* calcGameUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		69D1B9831E269DFD00BCBE58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 69D1B9661E269DFC00BCBE58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 69D1B96D1E269DFC00BCBE58;
+			remoteInfo = calcGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		69D1B96E1E269DFC00BCBE58 /* calcGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calcGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		69D1B9711E269DFC00BCBE58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		69D1B9731E269DFC00BCBE58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		69D1B9761E269DFC00BCBE58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		69D1B9781E269DFC00BCBE58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		69D1B97B1E269DFC00BCBE58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		69D1B97D1E269DFC00BCBE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69D1B9821E269DFD00BCBE58 /* calcGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = calcGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		69D1B9861E269DFD00BCBE58 /* calcGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calcGameUITests.swift; sourceTree = "<group>"; };
+		69D1B9881E269DFD00BCBE58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		69D1B96B1E269DFC00BCBE58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69D1B97F1E269DFD00BCBE58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69D1B9651E269DFC00BCBE58 = {
+			isa = PBXGroup;
+			children = (
+				69D1B9701E269DFC00BCBE58 /* calcGame */,
+				69D1B9851E269DFD00BCBE58 /* calcGameUITests */,
+				69D1B96F1E269DFC00BCBE58 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		69D1B96F1E269DFC00BCBE58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				69D1B96E1E269DFC00BCBE58 /* calcGame.app */,
+				69D1B9821E269DFD00BCBE58 /* calcGameUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		69D1B9701E269DFC00BCBE58 /* calcGame */ = {
+			isa = PBXGroup;
+			children = (
+				69D1B9711E269DFC00BCBE58 /* AppDelegate.swift */,
+				69D1B9731E269DFC00BCBE58 /* ViewController.swift */,
+				69D1B9751E269DFC00BCBE58 /* Main.storyboard */,
+				69D1B9781E269DFC00BCBE58 /* Assets.xcassets */,
+				69D1B97A1E269DFC00BCBE58 /* LaunchScreen.storyboard */,
+				69D1B97D1E269DFC00BCBE58 /* Info.plist */,
+			);
+			path = calcGame;
+			sourceTree = "<group>";
+		};
+		69D1B9851E269DFD00BCBE58 /* calcGameUITests */ = {
+			isa = PBXGroup;
+			children = (
+				69D1B9861E269DFD00BCBE58 /* calcGameUITests.swift */,
+				69D1B9881E269DFD00BCBE58 /* Info.plist */,
+			);
+			path = calcGameUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		69D1B96D1E269DFC00BCBE58 /* calcGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69D1B98B1E269DFD00BCBE58 /* Build configuration list for PBXNativeTarget "calcGame" */;
+			buildPhases = (
+				69D1B96A1E269DFC00BCBE58 /* Sources */,
+				69D1B96B1E269DFC00BCBE58 /* Frameworks */,
+				69D1B96C1E269DFC00BCBE58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = calcGame;
+			productName = calcGame;
+			productReference = 69D1B96E1E269DFC00BCBE58 /* calcGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		69D1B9811E269DFD00BCBE58 /* calcGameUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 69D1B98E1E269DFD00BCBE58 /* Build configuration list for PBXNativeTarget "calcGameUITests" */;
+			buildPhases = (
+				69D1B97E1E269DFD00BCBE58 /* Sources */,
+				69D1B97F1E269DFD00BCBE58 /* Frameworks */,
+				69D1B9801E269DFD00BCBE58 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				69D1B9841E269DFD00BCBE58 /* PBXTargetDependency */,
+			);
+			name = calcGameUITests;
+			productName = calcGameUITests;
+			productReference = 69D1B9821E269DFD00BCBE58 /* calcGameUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		69D1B9661E269DFC00BCBE58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "松浦 雅人";
+				TargetAttributes = {
+					69D1B96D1E269DFC00BCBE58 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6FV8F6LMG2;
+						ProvisioningStyle = Automatic;
+					};
+					69D1B9811E269DFD00BCBE58 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6FV8F6LMG2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 69D1B96D1E269DFC00BCBE58;
+					};
+				};
+			};
+			buildConfigurationList = 69D1B9691E269DFC00BCBE58 /* Build configuration list for PBXProject "calcGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 69D1B9651E269DFC00BCBE58;
+			productRefGroup = 69D1B96F1E269DFC00BCBE58 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				69D1B96D1E269DFC00BCBE58 /* calcGame */,
+				69D1B9811E269DFD00BCBE58 /* calcGameUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		69D1B96C1E269DFC00BCBE58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D1B97C1E269DFC00BCBE58 /* LaunchScreen.storyboard in Resources */,
+				69D1B9791E269DFC00BCBE58 /* Assets.xcassets in Resources */,
+				69D1B9771E269DFC00BCBE58 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69D1B9801E269DFD00BCBE58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		69D1B96A1E269DFC00BCBE58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D1B9741E269DFC00BCBE58 /* ViewController.swift in Sources */,
+				69D1B9721E269DFC00BCBE58 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69D1B97E1E269DFD00BCBE58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				69D1B9871E269DFD00BCBE58 /* calcGameUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		69D1B9841E269DFD00BCBE58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 69D1B96D1E269DFC00BCBE58 /* calcGame */;
+			targetProxy = 69D1B9831E269DFD00BCBE58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		69D1B9751E269DFC00BCBE58 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69D1B9761E269DFC00BCBE58 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		69D1B97A1E269DFC00BCBE58 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				69D1B97B1E269DFC00BCBE58 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		69D1B9891E269DFD00BCBE58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		69D1B98A1E269DFD00BCBE58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		69D1B98C1E269DFD00BCBE58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6FV8F6LMG2;
+				INFOPLIST_FILE = calcGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.vex.calcGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		69D1B98D1E269DFD00BCBE58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6FV8F6LMG2;
+				INFOPLIST_FILE = calcGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.vex.calcGame;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		69D1B98F1E269DFD00BCBE58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 6FV8F6LMG2;
+				INFOPLIST_FILE = calcGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.vex.calcGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = calcGame;
+			};
+			name = Debug;
+		};
+		69D1B9901E269DFD00BCBE58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 6FV8F6LMG2;
+				INFOPLIST_FILE = calcGameUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jp.co.vex.calcGameUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = calcGame;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		69D1B9691E269DFC00BCBE58 /* Build configuration list for PBXProject "calcGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69D1B9891E269DFD00BCBE58 /* Debug */,
+				69D1B98A1E269DFD00BCBE58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		69D1B98B1E269DFD00BCBE58 /* Build configuration list for PBXNativeTarget "calcGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69D1B98C1E269DFD00BCBE58 /* Debug */,
+				69D1B98D1E269DFD00BCBE58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		69D1B98E1E269DFD00BCBE58 /* Build configuration list for PBXNativeTarget "calcGameUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				69D1B98F1E269DFD00BCBE58 /* Debug */,
+				69D1B9901E269DFD00BCBE58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 69D1B9661E269DFC00BCBE58 /* Project object */;
+}
