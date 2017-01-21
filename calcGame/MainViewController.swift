@@ -29,7 +29,7 @@ struct PageSettings {
     //UIPageViewControllerに配置するUIViewControllerクラスの名称
     static let pageControllerIdentifierList : [String] = [
         "ViewController",
-        "ViewController",
+        "SelectStoryViewController",
         "TestViewController"
     ]
     
@@ -112,8 +112,14 @@ class MainViewController: UIViewController, UIPageViewControllerDataSource, UIPa
         self.pageViewController.delegate = self
         self.pageViewController.dataSource = self
         
+        //【カスタム】左右端タップによるページ送りをキャンセル
+        for gr in self.pageViewController.gestureRecognizers {
+            if(gr.isKind(of: UITapGestureRecognizer.classForCoder())){
+                self.pageViewController.view.removeGestureRecognizer(gr)
+            }
+        }
+        
         //UIPageViewControllerの初期の位置を決める
-        //self.pageViewController.setViewControllers([PageSettings.generateViewControllerList().first!], direction: .forward, animated: false, completion: nil)
         self.pageViewController.setViewControllers([generateViewControllerList().first!], direction: .forward, animated: false, completion: nil)
         
         //UIPageViewControllerを子のViewControllerとして登録
@@ -134,7 +140,13 @@ class MainViewController: UIViewController, UIPageViewControllerDataSource, UIPa
         PageSettings.pageControllerIdentifierList.forEach { viewControllerName in
             
             //ViewControllerのIdentifierからViewControllerを作る
-            if(c==2){
+            if(c==1){
+                //ストーリーセレクト画面
+                let viewController:SelectStoryViewController = UIStoryboard(name: "Main", bundle: nil) .
+                    instantiateViewController(withIdentifier: "\(viewControllerName)") as! SelectStoryViewController
+                viewController.parentContext = self
+                self.viewCtrArray.append(viewController)
+            }else if(c==2){
                 let viewController:TestViewController = UIStoryboard(name: "Main", bundle: nil) .
                     instantiateViewController(withIdentifier: "\(viewControllerName)") as! TestViewController
                 viewController.parentContext = self
@@ -268,7 +280,8 @@ class MainViewController: UIViewController, UIPageViewControllerDataSource, UIPa
         let pX: CGFloat = CGFloat(Int(self.view.frame.width) / 3 * i)
         let pY: CGFloat = CGFloat(0)
         let pW: CGFloat = CGFloat(Int(self.view.frame.width) / 3)
-        let pH: CGFloat = CGFloat(self.menuScrollView.frame.height)
+        //let pH: CGFloat = CGFloat(self.menuScrollView.frame.height)
+        let pH: CGFloat = CGFloat(PageSettings.menuScrollViewH)
         
         buttonElement.frame = CGRect(x: pX, y: pY, width: pW, height: pH)
         buttonElement.backgroundColor = UIColor.clear
@@ -288,6 +301,25 @@ class MainViewController: UIViewController, UIPageViewControllerDataSource, UIPa
         if self.viewControllerIndex != page {
             
             //self.pageViewController.setViewControllers([PageSettings.generateViewControllerList()[page]], direction: .forward, animated: true, completion: nil)
+            self.pageViewController.setViewControllers([self.generateViewControllerList()[page]], direction: .reverse, animated: true, completion: nil)
+            
+            self.viewControllerIndex = page
+            
+            //スクロールビューとボタンを押されたボタンに応じて移動する
+            self.moveToCurrentButtonScrollView(page)
+            self.moveToCurrentButtonLabel(page)
+        }
+    }
+    
+    //【カスタム】子UIViewControllerから呼び出し・画面遷移
+    func moveToPage(num:Int){
+        
+        //押されたボタンのタグを取得
+        let page: Int = num
+        
+        //UIPageViewControllerのから表示対象を決定する
+        if self.viewControllerIndex != page {
+            
             self.pageViewController.setViewControllers([self.generateViewControllerList()[page]], direction: .forward, animated: true, completion: nil)
             
             self.viewControllerIndex = page
@@ -298,24 +330,16 @@ class MainViewController: UIViewController, UIPageViewControllerDataSource, UIPa
         }
     }
     
-    //子UIViewControllerから呼び出し・画面遷移
-    func moveToPage(num:Int){
+    
+    //【カスタム】StorySelectViewControllerから呼び出し・モーダルでゲーム画面オープン
+    func openGameView(num:Int){
         
-        //押されたボタンのタグを取得
-        let page: Int = num
+        let viewController:GameViewController = UIStoryboard(name: "Main", bundle: nil) .
+            instantiateViewController(withIdentifier: "GameViewController") as! GameViewController
+        viewController.parentContext = self
+
+        self.present(viewController, animated: true, completion: nil)
         
-        //UIPageViewControllerのから表示対象を決定する
-        if self.viewControllerIndex != page {
-            
-            //self.pageViewController.setViewControllers([PageSettings.generateViewControllerList()[page]], direction: .forward, animated: true, completion: nil)
-            self.pageViewController.setViewControllers([self.generateViewControllerList()[page]], direction: .forward, animated: true, completion: nil)
-            
-            self.viewControllerIndex = page
-            
-            //スクロールビューとボタンを押されたボタンに応じて移動する
-            self.moveToCurrentButtonScrollView(page)
-            self.moveToCurrentButtonLabel(page)
-        }
     }
     
     

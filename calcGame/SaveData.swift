@@ -19,7 +19,7 @@ class SaveData :NSObject {
     var releaseArray:Dictionary<Int,Int> = Dictionary<Int,Int>()
     
     
-    override init() {
+    private override init() {
         if (userDefaults.object(forKey: "releaseArray") == nil) {
             //新規作成
             for i in 0...10 {

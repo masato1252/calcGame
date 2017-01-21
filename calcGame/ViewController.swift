@@ -470,6 +470,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     
+    //GameViewControllerから呼び出し・クリア（解放）したボタンの色更新
+    func reloadButtonAfterClear(){
+        for i in 0...10 {
+            
+            let tag = btnArray[i].tag
+            if(SaveData.sharedInstance.releaseArray[tag]==0){
+                //未解放
+                btnArray[i].backgroundColor = UIColor.black
+                btnArray[i].isEnabled = false
+            }else{
+                //解放済み
+                btnArray[i].backgroundColor = UIColor.init(hexString: "#87CEFA")
+                btnArray[i].isEnabled = true
+            }
+        }
+    }
+    
     
     //-----------------
     // Setting Context
@@ -511,8 +528,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             let tag = (btnArray[i].tag==999) ? 0 : btnArray[i].tag
             if(SaveData.sharedInstance.releaseArray[tag]==0){
+                //未解放
                 btnArray[i].backgroundColor = UIColor.black
                 btnArray[i].isEnabled = false
+            }else{
+                //解放済み
+                btnArray[i].backgroundColor = UIColor.init(hexString: "#87CEFA")
+                btnArray[i].isEnabled = true
             }
         }
         

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		696B6A251E2BD499004CCFBF /* SelectStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696B6A241E2BD499004CCFBF /* SelectStoryViewController.swift */; };
+		69CAE9401E311B0A00DCB2CE /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CAE93F1E311B0A00DCB2CE /* GameViewController.swift */; };
 		69D1B9721E269DFC00BCBE58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D1B9711E269DFC00BCBE58 /* AppDelegate.swift */; };
 		69D1B9791E269DFC00BCBE58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69D1B9781E269DFC00BCBE58 /* Assets.xcassets */; };
 		69D1B97C1E269DFC00BCBE58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69D1B97A1E269DFC00BCBE58 /* LaunchScreen.storyboard */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		696B6A241E2BD499004CCFBF /* SelectStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectStoryViewController.swift; sourceTree = "<group>"; };
+		69CAE93F1E311B0A00DCB2CE /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		69D1B96E1E269DFC00BCBE58 /* calcGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calcGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69D1B9711E269DFC00BCBE58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69D1B9781E269DFC00BCBE58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,8 +97,8 @@
 		69D1B9701E269DFC00BCBE58 /* calcGame */ = {
 			isa = PBXGroup;
 			children = (
-				69D1B9911E269E1900BCBE58 /* DeviceSize.swift */,
 				69D1B9921E269E1900BCBE58 /* HistoryCell.swift */,
+				69D1B9911E269E1900BCBE58 /* DeviceSize.swift */,
 				69D1B9931E269E1900BCBE58 /* SaveData.swift */,
 				69D1B9941E269E1900BCBE58 /* TestViewController.swift */,
 				69D1B9711E269DFC00BCBE58 /* AppDelegate.swift */,
@@ -104,6 +108,8 @@
 				69D1B99D1E269E7A00BCBE58 /* MainViewController.swift */,
 				69D1B9A01E269E7A00BCBE58 /* UIColor+Extension.swift */,
 				69D1B9A11E269E7A00BCBE58 /* ViewController.swift */,
+				69CAE93F1E311B0A00DCB2CE /* GameViewController.swift */,
+				696B6A241E2BD499004CCFBF /* SelectStoryViewController.swift */,
 				69D1B9781E269DFC00BCBE58 /* Assets.xcassets */,
 				69D1B97A1E269DFC00BCBE58 /* LaunchScreen.storyboard */,
 				69D1B97D1E269DFC00BCBE58 /* Info.plist */,
@@ -226,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				696B6A251E2BD499004CCFBF /* SelectStoryViewController.swift in Sources */,
 				69D1B9AD1E26A01800BCBE58 /* DeviceSize.swift in Sources */,
 				69D1B9A41E269E7A00BCBE58 /* HistoryData.swift in Sources */,
 				69D1B9721E269DFC00BCBE58 /* AppDelegate.swift in Sources */,
@@ -234,6 +241,7 @@
 				69D1B9AA1E269E7A00BCBE58 /* ViewController.swift in Sources */,
 				69D1B9A61E269E7A00BCBE58 /* MainViewController.swift in Sources */,
 				69D1B9981E269E1900BCBE58 /* TestViewController.swift in Sources */,
+				69CAE9401E311B0A00DCB2CE /* GameViewController.swift in Sources */,
 				69D1B9971E269E1900BCBE58 /* SaveData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,6 +440,7 @@
 				69D1B98D1E269DFD00BCBE58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		69D1B98E1E269DFD00BCBE58 /* Build configuration list for PBXNativeTarget "calcGameUITests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +449,7 @@
 				69D1B9901E269DFD00BCBE58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
