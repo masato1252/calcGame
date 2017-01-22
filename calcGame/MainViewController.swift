@@ -30,7 +30,7 @@ struct PageSettings {
     static let pageControllerIdentifierList : [String] = [
         "ViewController",
         "SelectStoryViewController",
-        "TestViewController"
+        "ConfigViewController"
     ]
     
     //UIPageViewControllerに追加するViewControllerのリストを生成する
@@ -82,15 +82,10 @@ class MainViewController: UIViewController, UIPageViewControllerDataSource, UIPa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let userDefaults = UserDefaults.standard
-//        //クリアデータの読み込み
-//        if (userDefaults.object(forKey: "data") == nil) {
-//            //新規作成
-//                userDefaults.set(0, forKey: "data")
-//            for i in 0...10 {
-//                userDefaults.set(0, forKey: "\(i)")
-//            }
-//        }
+        //クイズデータのロード
+        //QuizDataHelper.sharedInstance.resetQuizData()
+        //SaveData.sharedInstance.resetSaveData()
+
         
         //UIScrollViewの初期化
         self.menuScrollView = UIScrollView()
@@ -147,8 +142,8 @@ class MainViewController: UIViewController, UIPageViewControllerDataSource, UIPa
                 viewController.parentContext = self
                 self.viewCtrArray.append(viewController)
             }else if(c==2){
-                let viewController:TestViewController = UIStoryboard(name: "Main", bundle: nil) .
-                    instantiateViewController(withIdentifier: "\(viewControllerName)") as! TestViewController
+                let viewController:ConfigViewController = UIStoryboard(name: "Main", bundle: nil) .
+                    instantiateViewController(withIdentifier: "\(viewControllerName)") as! ConfigViewController
                 viewController.parentContext = self
                 self.viewCtrArray.append(viewController)
             }else{
@@ -337,11 +332,14 @@ class MainViewController: UIViewController, UIPageViewControllerDataSource, UIPa
         let viewController:GameViewController = UIStoryboard(name: "Main", bundle: nil) .
             instantiateViewController(withIdentifier: "GameViewController") as! GameViewController
         viewController.parentContext = self
+        viewController.gameNum = num
+        self.present(viewController, animated: true, completion: {
+            
+        })
 
-        self.present(viewController, animated: true, completion: nil)
-        
     }
     
+
     
     //ボタンのスクロールビューをスライドさせる
     func moveToCurrentButtonScrollView(_ page: Int) {

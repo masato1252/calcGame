@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     //履歴用テーブルビュー
@@ -477,7 +478,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let tag = btnArray[i].tag
             if(SaveData.sharedInstance.releaseArray[tag]==0){
                 //未解放
-                btnArray[i].backgroundColor = UIColor.black
+                btnArray[i].backgroundColor = UIColor.init(hexString: "#D3D3D3")
                 btnArray[i].isEnabled = false
             }else{
                 //解放済み
@@ -529,7 +530,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let tag = (btnArray[i].tag==999) ? 0 : btnArray[i].tag
             if(SaveData.sharedInstance.releaseArray[tag]==0){
                 //未解放
-                btnArray[i].backgroundColor = UIColor.black
+                btnArray[i].backgroundColor = UIColor.init(hexString: "#D3D3D3")
                 btnArray[i].isEnabled = false
             }else{
                 //解放済み

@@ -35,6 +35,7 @@ class SelectStoryViewController: UIViewController {
     @IBOutlet weak var label_state: UILabel!
     @IBOutlet weak var label_select: UILabel!
     @IBOutlet weak var label_eachState: UILabel!
+    @IBOutlet weak var label_time: UILabel!
     
     @IBOutlet weak var layout_upperMenu: UIStackView!
     @IBOutlet weak var layout_btn1: UIStackView!
@@ -44,6 +45,7 @@ class SelectStoryViewController: UIViewController {
     
     @IBOutlet weak var layout_eachState: UIStackView!
     @IBOutlet weak var layout_playBtn: UIStackView!
+    
     
     var btnArray:[UIButton] = [UIButton]()
     
@@ -84,9 +86,14 @@ class SelectStoryViewController: UIViewController {
         //解放済みかどうか判定し、下部ステートに表示
         if(SaveData.sharedInstance.releaseArray[sender.tag]==0){
             self.label_eachState.text = "ロック中（未クリア）"
+            self.label_time.text = ""
+            
         }else{
             self.label_eachState.text = "解放済み（クリア）"
+            self.label_time.text = "ベストタイム " + SaveData.sharedInstance.timeArray[sender.tag]!
         }
+        
+        
         
         //選択中の番号を保持
         selectNum = sender.tag
@@ -104,9 +111,9 @@ class SelectStoryViewController: UIViewController {
     internal func tappedPlayBtn(){
         
         self.parentContext?.openGameView(num: selectNum)
-        
     }
     
+
     
     //GameViewControllerから呼び出し・クリア（解放）したボタンの色更新
     func reloadButtonAfterClear(){
@@ -118,6 +125,27 @@ class SelectStoryViewController: UIViewController {
             }else{
                 btnArray[i].backgroundColor = UIColor.init(hexString: "#87CEFA")
             }
+        }
+        
+        self.label_eachState.text = "解放済み（クリア）"
+        self.label_time.text = "ベストタイム " + SaveData.sharedInstance.timeArray[selectNum]!
+    }
+    
+    //設定画面より、セーブデータリセット時
+    func reloadButtonAfterResetData(){
+        for i in 0..<btnArray.count-1 {
+            
+            let tag = btnArray[i].tag
+            if(SaveData.sharedInstance.releaseArray[tag]==0){
+                btnArray[i].backgroundColor = UIColor.init(hexString: "#FA8072")
+            }else{
+                btnArray[i].backgroundColor = UIColor.init(hexString: "#87CEFA")
+            }
+        }
+        
+        if(isShowedPlayBtn){
+            self.label_eachState.text = "ロック中（未クリア）"
+            self.label_time.text = ""
         }
     }
     
@@ -172,6 +200,8 @@ class SelectStoryViewController: UIViewController {
                 btnArray[i].addTarget(self, action: #selector(self.tappedKey(sender:)), for: .touchUpInside)
             }
         }
+        //「1」のみ非活性
+        btnArray[0].isEnabled = false
         
         btnPlay.addTarget(self, action: #selector(self.tappedPlayBtn), for: .touchUpInside)
 
@@ -253,6 +283,9 @@ class SelectStoryViewController: UIViewController {
                 v_tmp += BtnWidth + marginRight_Btn
             }
         }
+        
+//        label_time.translatesAutoresizingMaskIntoConstraints = true
+//        label_time.frame = CGRect(x:Int(label_time.frame.minX), y:Int(label_time.frame.minY)+5, width:Int(label_time.frame.size.width), height:Int(label_time.frame.size.height))
 
     }
     
